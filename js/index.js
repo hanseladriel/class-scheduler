@@ -92,6 +92,7 @@ const scheduler = (() => {
         ];
     
         classes = classes.concat(templateClasses);
+        maxRoom = 6;
         displayClasses();
     }
 
