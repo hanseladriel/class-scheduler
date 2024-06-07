@@ -23,7 +23,6 @@ function displayRooms(rooms, selector) {
     }
 }
 
-
 function visualizeGraph(classes, selector, steps) {
     const margin = 20;
     const width = (window.innerWidth - 2 * margin) * 0.8;

@@ -15,6 +15,10 @@ function executeBacktracking(classes, maxRoom) {
     let rooms = [];
     let steps = [];
 
+    function recordStep(classItem, roomIndex, action) {
+        steps.push({ classItem, roomIndex, action });
+    }
+
     function canPlace(classItem, room) {
         return room.every(c => c.end <= classItem.start || c.start >= classItem.end);
     }
@@ -40,10 +44,6 @@ function executeBacktracking(classes, maxRoom) {
         }
         recordStep(classes[index], rooms.length, 'remove');
         return false;
-    }
-
-    function recordStep(classItem, roomIndex, action) {
-        steps.push({ classItem, roomIndex, action });
     }
 
     classes.sort((a, b) => a.start.localeCompare(b.start));
