@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f7f9fc;
     margin: 0;
     padding: 0;
     color: #333;
@@ -9,7 +9,7 @@ body {
 h1 {
     text-align: center;
     margin-top: 20px;
-    color: #444;
+    color: #37474f;
 }
 
 #chartBacktracking, #chartGreedy {
@@ -26,8 +26,8 @@ h1 {
 }
 
 .room {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: 1px solid #cfd8dc;
     border-radius: 8px;
     margin: 10px;
     padding: 10px;
@@ -36,21 +36,20 @@ h1 {
 }
 
 .no-room {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: 1px solid #cfd8dc;
     border-radius: 8px;
     margin: 10px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: #333;
+    color: #37474f;
     font-size: 18px;
 }
 
-
 .class-item {
-    background-color: #e6f7ff;
-    border: 1px solid #b3e5fc;
+    background-color: #e3f2fd;
+    border: 1px solid #90caf9;
     border-radius: 5px;
     margin: 5px 0;
     padding: 5px;
@@ -58,7 +57,7 @@ h1 {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #ff5c5c;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -72,7 +71,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #e64a19;
 }
 
 form {
@@ -90,7 +89,7 @@ form label, form input {
 input[type="text"], input[type="time"], input[type="number"] {
     padding: 5px;
     margin: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #cfd8dc;
     border-radius: 5px;
 }
 
@@ -117,10 +116,7 @@ table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #cfd8dc;
 }
 
 th, td {
@@ -129,19 +125,25 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #37474f;
     color: white;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+td {
+    background-color: #ffffff;
+    border: 1px solid #cfd8dc;
+    color: #333;
+}
+
+tr:nth-child(even) td {
+    background-color: #e3f2fd;
 }
 
 .back-button {
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #4CAF50;
+    background-color: #ff5c5c;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -154,5 +156,5 @@ tr:nth-child(even) {
 }
 
 .back-button:hover {
-    background-color: #45a049;
+    background-color: #e64a19;
 }
