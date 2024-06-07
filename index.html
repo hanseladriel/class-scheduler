@@ -3,51 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Schedule Manager</title>
-    <link rel="stylesheet" href="src/css/styles.css">
+    <title>Class Timetable Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="app">
-        <h1>Class Schedule Manager</h1>
-        <form id="classForm">
-            <label for="courseName">Course Name:</label>
-            <input type="text" id="courseName" required>
-            
-            <label for="day">Day:</label>
-            <select id="day">
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
-                <option value="Thursday">Thursday</option>
-                <option value="Friday">Friday</option>
-            </select>
-            
-            <label for="startTime">Start Time:</label>
-            <input type="time" id="startTime" required>
-            
-            <label for="endTime">End Time:</label>
-            <input type="time" id="endTime" required>
-            
-            <button type="submit">Add Class</button>
-        </form>
-        <div id="classList">
-            <h2>Classes</h2>
-            <ul id="classes"></ul>
-        </div>
-        <div id="algorithmSelection">
-            <h2>Select Algorithm</h2>
-            <button id="greedy">Greedy Strategy</button>
-            <button id="backtracking">Backtracking Strategy</button>
-        </div>
-        <div id="visualization">
-            <h2>Visualization</h2>
-            <canvas id="visualizationCanvas"></canvas>
-        </div>
-        <div id="scheduleOutput">
-            <h2>Generated Schedule</h2>
-            <ul id="schedule"></ul>
-        </div>
+    <h1>Class Timetable Scheduler</h1>
+    <form id="classForm">
+        <label for="className">Class Name:</label>
+        <input type="text" id="className" name="className" required>
+        <label for="startTime">Start Time:</label>
+        <input type="time" id="startTime" name="startTime" required>
+        <label for="endTime">End Time:</label>
+        <input type="time" id="endTime" name="endTime" required>
+        <button type="button" onclick="scheduler.addClass()">Add Class</button>
+        <button type="button" onclick="scheduler.addTemplate()">Add Template Classes</button>
+        <button type="button" onclick="scheduler.clearClasses()">Clear Classes</button>
+    </form>
+    <div id="maxRoomSetting">
+        <label for="maxRoom">Maximum Number of Rooms:</label>
+        <input type="number" id="maxRoom" name="maxRoom" min="1" value="0">
+        <button type="button" onclick="scheduler.saveMaxRoom()">Set Max Rooms</button>
     </div>
-    <script src="src/js/script.js"></script>
+    <div id="classesList"></div>
+    <div id="algorithmChoice">
+        <button onclick="scheduler.chooseAlgorithm('greedy')">Use Greedy Algorithm</button>
+        <button onclick="scheduler.chooseAlgorithm('backtracking')">Use Backtracking Algorithm</button>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/visualization.js"></script>
 </body>
 </html>
